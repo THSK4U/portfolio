@@ -1,15 +1,20 @@
 @media (min-width: 768px) {
-  #home .intro {
+  #home {
+    text-align: left  !important;
+    .text-center {
+      margin-left: 1rem !important;
+      align-items: flex-start !important;
+    }
+
+    .intro {
     width: 330px  !important;
     text-align: left  !important;
+            }
     }
 }
 
 #home {
-  margin-top: 20px;
-  margin-bottom: 14px;
-  display: flex;
-  flex-direction: row;
+  margin: 100px 0 20% 0;
   justify-content: center;
   align-items: center;
 
@@ -20,6 +25,9 @@
   .intro{
     width: 80%;
     text-align: center;
+  }
+  .text-center {
+    align-items: center;
   }
 
   .btn-primary {
