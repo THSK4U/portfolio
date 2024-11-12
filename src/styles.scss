@@ -606,7 +606,7 @@ body {
   background-color: hsl(var(--muted));
 }
 
-.bg-primary {
+.bg-primary-green {
   background-color: hsl(var(--primary));
 }
 
@@ -688,6 +688,22 @@ body {
 
 .bg-opacity-90 {
   background-color: rgba(var(--background), 0.9);
+}
+::-webkit-scrollbar {
+  width: 0.4em;
+  height: 2em;
+  border-radius: 100px
+}
+::-webkit-scrollbar-track-piece {
+  background: #ffffff
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+}
+.line{
+  border-radius: 100px;
+  height: .5rem;
+  width: 4rem;
 }
 
 @media (min-width: 1024px) {
