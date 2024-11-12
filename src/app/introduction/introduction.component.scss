@@ -1,0 +1,29 @@
+p {
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+  font-size: 1.5rem;
+}
+.content {
+  padding-top: 100px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  .texts {
+    width: 70%;
+  }
+
+
+}
+
+@media (max-width: 768px) {
+  .content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    .texts {
+      width: 100%;
+    }
+
+  }
+}
