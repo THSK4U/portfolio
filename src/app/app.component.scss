@@ -5,7 +5,18 @@
   --tw-border-opacity: 1;
   border-color: rgb(231 229 228 / var(--tw-border-opacity));
 }
-.p-4 {
-  padding: 1rem;
+.p4 {
+  padding: 0.8rem;
 }
-
+.page {
+  height: 90vh !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .page {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
