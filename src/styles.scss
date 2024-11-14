@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 *,
 :before,
 :after {
@@ -115,7 +114,8 @@
   box-sizing: border-box;
   border-width: 0;
   border-style: solid;
-  border-color: #e5e7eb
+  border-color: #e5e7eb;
+  font-family: Outfit,sans-serif;
 }
 
 :before,:after {
