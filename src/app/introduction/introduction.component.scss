@@ -11,7 +11,13 @@ p {
   .texts {
     width: 70%;
   }
-
+  #holder {
+    width: 480px;
+    height: 480px;
+    margin: -70px auto;
+    background-color: transparent;
+    pointer-events: stroke;
+  }
 
 }
 
@@ -23,6 +29,7 @@ p {
     flex-direction: column-reverse;
     .texts {
       width: 100%;
+      text-align: center;
     }
 
   }
