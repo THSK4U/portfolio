@@ -1,0 +1,101 @@
+.title {
+  padding-top: 0.5rem;
+  margin-bottom: 3rem;
+  p {
+    margin-top: 0;
+    margin-bottom: 0.3rem;
+    font-size: 1.5rem;
+  }
+}
+
+.education-container {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 25px;
+  font-family: Outfit, sans-serif;
+  flex-wrap: wrap;
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-basis: 0;
+  width: fit-content;
+  border-right: 2px solid #91c96e;
+  padding: 1px 10px 0 0;
+}
+
+.institution-name {
+  color: #244231;
+  font: 700 14px/2 Outfit, sans-serif;
+  width: 22vw;
+  align-self: stretch;
+}
+
+.duration {
+  color: rgba(75, 85, 99, 0.8);
+  font: 400 14px/1 Outfit, sans-serif;
+  align-self: start;
+  margin-top: 4px;
+}
+
+.content-container {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 0;
+  width: fit-content;
+  margin-left: 21px;
+}
+
+.course-title {
+  color: #91c96e;
+  font-size: 1.025rem;
+  align-self: start;
+}
+
+.course-description {
+  color: #374151;
+  font: 400 16px/24px Outfit, sans-serif;
+  margin-top: 1px;
+}
+
+@media (max-width: 991px) {
+  .education-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .timeline-container,
+  .content-container {
+    width: 85vw;
+    align-self: center;
+  }
+
+  .timeline-content {
+    margin-top: 9px;
+  }
+
+  .education-entry {
+    padding-right: 20px;
+  }
+
+  .education-details {
+    margin-top: 8px;
+  }
+
+  .course-description,
+  .degree-description {
+    margin-right: 0;
+  }
+
+  .degree-title {
+    margin-top: 40px;
+  }
+
+  .institution-name {
+    width: 100%;
+  }
+}

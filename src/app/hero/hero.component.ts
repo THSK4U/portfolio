@@ -8,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent {
+  openForm() {
+    document.getElementById("myForm")!.style.display = "block";
+  }
+
+  closeForm() {
+    document.getElementById("myForm")!.style.display = "none";
+
+  }
+
 
 }

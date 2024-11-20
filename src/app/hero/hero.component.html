@@ -1,6 +1,6 @@
 <div id="home" class="d-flex flex-column flex-md-row text-start mx-auto">
   <div class="border rounded-circle">
-    <img src="" alt="SELLAK Taha" class="img-fluid rounded-circle" style="width: 64px; height: 64px;">
+    <img src="https://cdn.builder.io/api/v1/image/assets/a90cbfafcaf044db9230d5161f223419/eff81842d490eeff4a9eb54efe1d743e6edd39d7d94a1b252e645733a571f960?apiKey=a90cbfafcaf044db9230d5161f223419&" alt="SELLAK Taha" class="img-fluid rounded-circle" style="width: 64px; height: 64px;">
   </div>
   <div class="d-flex flex-column text-center md-align-items-start md-text-start">
     <div class="d-flex flex-column">
@@ -11,8 +11,24 @@
       <p class="text">Spécialisé dans le développement <span class="text-primary">d'applications web</span> avec des interfaces intuitives et des expériences utilisateurs fluides, en utilisant <span class="text-primary">Spring Boot</span> et <span class="text-primary">Angular</span>.</p>
     </div>
     <div class="d-flex gap-2">
-      <a href="/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">EMAIL</a>
-      <a href="/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary">CV</a>
+      <button (click)="openForm()" class="btn btn-primary">Contactez-moi</button>
+      <a href="https://drive.google.com/file/d/1jwm0CaMkar_6sBANPTpIY94bF3RxWm5U/view?usp=sharing" class="btn btn-outline-primary">CV</a>
+
+      <div class="form-popup" id="myForm">
+        <form action="https://formspree.io/f/mgveznva" method="POST" class="form-container">
+          <h1>Contactez-moi</h1>
+
+          <label><b>Votre email:</b></label>
+          <input type="email" name="email" required>
+
+          <label><b>Votre message:</b></label>
+          <textarea name="message" required></textarea>
+
+          <button type="submit" class="btn">Envoyer</button>
+          <button type="button" class="btn cancel" (click)="closeForm()">Fermer</button>
+        </form>
+      </div>
+
     </div>
   </div>
 </div>
