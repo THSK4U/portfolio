@@ -639,8 +639,8 @@ body {
   color: hsl(var(--muted));
 }
 
-.text-primary {
-  color: hsl(var(--primary));
+.text-primary-green {
+  color: hsl(var(--primary)) !important;
 }
 
 .text-secondary {
