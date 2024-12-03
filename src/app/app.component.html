@@ -12,26 +12,35 @@
 </div>
 <div class="Footer">
   <div class="position-fixed bottom-4 start-50 translate-middle-x">
-    <div class="d-flex align-items-center gap-1 rounded-pill bg-white px-4 py-2 shadow-lg">
+    <div class="d-flex align-items-center gap-1 rounded-pill px-4 py-2 shadow-lg" [ngClass]="{'bg-white': !isDarkTheme, 'bg-dark': isDarkTheme}">
       <!-- Home -->
-      <a href="/" class="btn btn-ghost text-emerald-800 hover:text-emerald-600" aria-label="Home">
+      <a href="/" class="btn btn-ghost" [ngClass]="{'text-emerald-800': !isDarkTheme, 'text-emerald-400': isDarkTheme}" aria-label="Home">
         <i class="bi bi-house-fill"></i>
       </a>
       <div class="vr"></div>
       <!-- GitHub -->
-      <a href="https://github.com/THSK4U/" class="btn btn-ghost text-emerald-800 hover:text-emerald-600" aria-label="GitHub">
+      <a href="https://github.com/THSK4U/" class="btn btn-ghost" [ngClass]="{'text-emerald-800': !isDarkTheme, 'text-emerald-400': isDarkTheme}" aria-label="GitHub" target="_blank" rel="noopener">
         <i class="bi bi-github"></i>
       </a>
       <!-- LinkedIn -->
-      <a href="https://www.linkedin.com/in/sellaktaha/" class="btn btn-ghost text-emerald-800 hover:text-emerald-600" aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/in/sellaktaha/" class="btn btn-ghost" [ngClass]="{'text-emerald-800': !isDarkTheme, 'text-emerald-400': isDarkTheme}" aria-label="LinkedIn" target="_blank" rel="noopener">
         <i class="bi bi-linkedin"></i>
       </a>
       <div class="vr"></div>
       <!-- Theme Toggle -->
-      <button type="button" class="btn btn-ghost text-emerald-800 hover:text-emerald-600" aria-label="Toggle theme">
-        <i class="bi bi-moon"></i>
+      <button type="button" class="btn btn-ghost" [ngClass]="{'text-emerald-800': !isDarkTheme, 'text-emerald-400': isDarkTheme}" (click)="toggleTheme()" aria-label="Toggle theme">
+        <i class="bi" [ngClass]="isDarkTheme ? 'bi-sun' : 'bi-moon'"></i>
       </button>
     </div>
   </div>
-
 </div>
+
+<!-- Back to Top Button -->
+<button 
+  *ngIf="showBackToTop" 
+  (click)="scrollToTop()" 
+  class="back-to-top" 
+  [ngClass]="{'visible': showBackToTop}"
+  aria-label="Back to top">
+  <i class="bi bi-arrow-up"></i>
+</button>
