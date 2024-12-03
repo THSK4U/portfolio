@@ -6,6 +6,7 @@ import {IntroductionComponent} from './introduction/introduction.component';
 import {SkillsComponent} from './skills/skills.component';
 import {ProjectsComponent} from './projects/projects.component';
 import {ExperienceComponent} from './experience/experience.component';
+import { ScrollDownComponent } from './scroll-down/scroll-down.component';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,8 @@ import {ExperienceComponent} from './experience/experience.component';
     IntroductionComponent,
     SkillsComponent,
     ProjectsComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    ScrollDownComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']

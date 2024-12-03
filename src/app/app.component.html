@@ -4,6 +4,7 @@
   </a>
 </div>
 <div class="root">
+  <app-scroll-down></app-scroll-down>
 <app-hero class="page"></app-hero>
 <app-introduction class="page"></app-introduction>
 <app-skills class="page"></app-skills>
@@ -36,10 +37,10 @@
 </div>
 
 <!-- Back to Top Button -->
-<button 
-  *ngIf="showBackToTop" 
-  (click)="scrollToTop()" 
-  class="back-to-top" 
+<button
+  *ngIf="showBackToTop"
+  (click)="scrollToTop()"
+  class="back-to-top"
   [ngClass]="{'visible': showBackToTop}"
   aria-label="Back to top">
   <i class="bi bi-arrow-up"></i>
