@@ -1,0 +1,15 @@
+{
+  "background_color": "black",
+  "description": "SELLAK Taha's professional portfolio showcasing skills, projects, and experience in web development",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "SELLAK Taha",
+  "short_name": "portfolio",
+  "start_url": "/portfolio/src/index.html"
+}
