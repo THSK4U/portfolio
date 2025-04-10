@@ -14,8 +14,6 @@ import { SkillsComponent } from './skills/skills.component';
   imports: [
     RouterOutlet,
     CommonModule,
-
-
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']

@@ -1,0 +1,53 @@
+<div class="title">
+    <p>Articles à <span class="text-primary-green">la Une</span></p>
+    <div class="line bg-primary-green"></div>
+</div>
+
+<section class="articles-section">
+    <div class="articles-container">
+        <article class="article-card">
+            <div class="article-layout">
+                <div class="article-image-wrapper">
+                    <img src="https://www.womenintech.co.uk/wp-content/uploads/2021/11/Tech-skills-2022-1-1536x864.png.webp" alt="Intelligence Artificielle" class="article-image" />
+                </div>
+                <div class="article-details">
+                    <div class="article-info">
+                        <div class="article-header mt-1">
+                            <p class="article-title">L'IA au quotidien</p>
+                            <span class="article-date">15 Mars 2024</span>
+                        </div>
+                        <p class="article-subtitle">Découvrez les dernières avancées en intelligence artificielle et comment elles transformeront notre quotidien dans les années à venir.
+                            Découvrez les dernières avancées en intelligence artificielle et comment elles transformeront notre quotidien dans les années à venir.
+                        </p>
+                        <a href="#" class="read-more">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <div class="list-container">
+            @for (item of list; track item) {
+            <article class="list-card">
+                <div class="list-layout">
+                    <div class="list-image-wrapper">
+                        <img src="https://www.womenintech.co.uk/wp-content/uploads/2021/11/Tech-skills-2022-1-1536x864.png.webp" alt="Intelligence Artificielle" class="article-image" />
+                    </div>
+                    <div class="list-details">
+                        <div class="list-info">
+                            <div class="list-header mt-1">
+                                <p class="list-title">L'IA au quotidien</p>
+                                <span class="list-date">15 Mars 2024</span>
+                            </div>
+                            <p class="list-subtitle">Découvrez les dernières avancées en intelligence artificielle et comment elles transformeront notre quotidien dans les années à venir.
+                                Découvrez les dernières avancées en intelligence artificielle et comment elles transformeront notre quotidien dans les années à venir.
+                            </p>
+                            <a href="#" class="read-more">Lire l'article</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        }
+        </div>
+        
+    </div>
+</section>

@@ -1,13 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { BlogRoutingModule } from './blog-routing.module';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-blog',
   standalone: true,
   imports: [
     CommonModule,
-    BlogRoutingModule
+    RouterOutlet,
+
   ],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.scss'

@@ -707,6 +707,20 @@ body {
   width: 4rem;
 }
 
+/* Container for max-width content */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Container for max-width content */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media (min-width: 1024px) {
   body {
     padding-left: 10rem;
@@ -714,7 +728,21 @@ body {
   }
 }
 
-/* Smooth Scroll Behavior */
+@media (min-width: 1600px) {
+  body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .container {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
