@@ -1,25 +1,21 @@
-import { Component, HostListener, OnInit, Renderer2 } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, HostListener, OnInit, Renderer2 } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {HeroComponent} from './hero/hero.component';
-import {IntroductionComponent} from './introduction/introduction.component';
-import {SkillsComponent} from './skills/skills.component';
-import {ProjectsComponent} from './projects/projects.component';
-import {ExperienceComponent} from './experience/experience.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { HeroComponent } from './hero/hero.component';
+import { IntroductionComponent } from './introduction/introduction.component';
+import { ProjectsComponent } from './projects/projects.component';
 import { ScrollDownComponent } from './scroll-down/scroll-down.component';
+import { SkillsComponent } from './skills/skills.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    CommonModule,
     RouterOutlet,
-    HeroComponent,
-    IntroductionComponent,
-    SkillsComponent,
-    ProjectsComponent,
-    ExperienceComponent,
-    ScrollDownComponent
+    CommonModule,
+
+
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
