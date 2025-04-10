@@ -25,5 +25,14 @@
 </head>
 <body>
   <app-root></app-root>
+  <script>
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.register (
+          '/sw.js',
+          {scope: '/'}
+        )
+      }
+  </script>
 </body>
+  
 </html>
