@@ -10,15 +10,15 @@
   <meta name="author" content="SELLAK Taha">
   <meta name="theme-color" content="#047857">
   <link rel="manifest" href="a2hs/manifest.webmanifest">
-  
+
   <!-- Open Graph / Social Media Meta Tags -->
   <meta property="og:title" content="SELLAK Taha - Portfolio">
   <meta property="og:description" content="Professional portfolio showcasing web development projects and skills">
   <meta property="og:type" content="website">
-  
+
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-  
+
   <!-- Preconnect to external resources -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
@@ -33,9 +33,13 @@
         navigator.serviceWorker.register (
           '/sw.js',
           {scope: '/'}
-        )
+        ).then(registration => {
+          console.log('Service Worker enregistré avec succès');
+        }).catch(error => {
+          console.error('Erreur lors de l\'enregistrement du Service Worker:', error);
+        });
       }
   </script>
 </body>
-  
+
 </html>

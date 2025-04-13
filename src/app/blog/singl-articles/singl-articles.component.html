@@ -1,1 +1,36 @@
-<p>singl-articles works!</p>
+<div class="article-container" *ngIf="!loading && article && !error">
+  <div class="article-header">
+    <h1 class="article-title">{{ article.title }}</h1>
+    <div class="article-meta">
+      <span class="article-author">Par {{ article.author || 'Auteur inconnu' }}</span>
+      <span class="article-date">{{ article.publishedDate | date:'d MMMM yyyy' }}</span>
+    </div>
+    <div class="article-tags" *ngIf="article.keyword">
+      <span class="tag-badge">{{ article.keyword.keyword }}</span>
+      <span class="tag-badge" *ngFor="let secondaryKeyword of article.keyword.secondaryKeyword">
+        {{ secondaryKeyword }}
+      </span>
+    </div>
+  </div>
+
+  <div class="article-featured-image">
+    <img [src]="article.imageUrl" [alt]="article.altText || article.title" class="featured-image">
+  </div>
+
+  <div class="article-description">
+    <p>{{ article.description }}</p>
+  </div>
+
+  <div class="article-content" [innerHTML]="article.content"></div>
+</div>
+
+<!-- Message de chargement -->
+<div *ngIf="loading" class="loading-container">
+  <p>Chargement de l'article...</p>
+</div>
+
+<!-- Message d'erreur -->
+<div *ngIf="error" class="error-container">
+  <p class="error-message">{{ error }}</p>
+  <a routerLink="/Articles" class="back-link">Retour aux articles</a>
+</div>

@@ -29,7 +29,19 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
     height: 100%;
+    cursor: pointer;
+    
+    &:hover .article-image{
+      transform: scale(1.05);
+    }
+
+    &:hover .article-title{
+      white-space: normal; 
+      overflow: visible;
+      text-overflow: clip; 
+    }
 }
+
 
 .article-layout {
   display: flex;
@@ -55,6 +67,7 @@
   &:hover {
     transform: scale(1.05);
   }
+ 
 }
 
 .article-details {
@@ -68,8 +81,6 @@
 }
 
 .article-header {
-  display: flex;
-  justify-content: space-between;
   align-items: flex-start;
 }
 
@@ -77,7 +88,12 @@
   font-size: 1.5rem;
   font-weight: 600;
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  width: 100%;
 }
+
 
 .article-date {
   font-size: 0.9rem;

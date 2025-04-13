@@ -1,6 +1,6 @@
 .list-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit);
+    grid-template-columns: auto-fill;
     gap: 2rem;
 }
 .list-card {
@@ -11,7 +11,13 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
+    cursor: pointer;
+
+    &:hover .list-image{
+      transform: scale(1.05);
+    }
 }
+
 .list-layout {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -33,12 +39,9 @@
     width: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
-  
-    &:hover {
-      transform: scale(1.05);
-    }
   }
-  
+
+
   .list-details {
   
   }

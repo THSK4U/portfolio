@@ -4,5 +4,5 @@ import { SinglArticlesComponent } from './singl-articles/singl-articles.componen
 
 export const blogRoutes: Routes = [
   { path: '', component: HomeArticlesComponent },
-  { path: 'article/:id', component: SinglArticlesComponent }
+  { path: ':slug', component: SinglArticlesComponent }
 ];

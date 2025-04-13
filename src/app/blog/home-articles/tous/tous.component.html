@@ -1,5 +1,32 @@
-<div class="title mt-5">
+<div class="title mt-5" *ngIf="articles.length > 0 && !loading && !error">
     <p>Tous les <span class="text-primary-green">Articles</span></p>
     <div class="line bg-primary-green"></div>
-  </div>
-  
+</div>
+
+<!-- Grille d'articles -->
+<section class="articles-section" *ngIf="!loading && !error">
+    <div class="articles-container">
+        <article class="article-card" *ngFor="let article of articles">
+            <div class="article-layout" [routerLink]="['/Articles/', article.slug]">
+                <div class="article-image-wrapper">
+                    <img [src]="article.imageUrl || 'https://www.womenintech.co.uk/wp-content/uploads/2021/11/Tech-skills-2022-1-1536x864.png.webp'"
+                         [alt]="article.altText || article.title || 'Article image'"
+                         class="article-image" />
+                </div>
+                <div class="article-details">
+                    <div class="article-info">
+                        <div class="article-header mt-1">
+                            <p class="article-title">{{ article.title }}</p>
+                            <span class="article-date">{{ article.publishedDate | date:'d MMMM yyyy' }}</span>
+                        </div>
+                        <p class="article-subtitle">{{ article.description }}</p>
+                        <div class="article-tags" *ngIf="article.keyword">
+                            <span class="tag-badge">{{ article.keyword.keyword }}</span>
+                        </div>
+                        <a [routerLink]="['/Articles/', article.slug]" class="read-more">Lire l'article</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
