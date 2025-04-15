@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, OnInit, Renderer2 } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, HostListener, OnInit, Renderer2, inject } from '@angular/core';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { filter } from 'rxjs';
 import { ExperienceComponent } from './experience/experience.component';
 import { HeroComponent } from './hero/hero.component';
 import { IntroductionComponent } from './introduction/introduction.component';
@@ -21,10 +22,18 @@ import { SkillsComponent } from './skills/skills.component';
 export class AppComponent implements OnInit {
   showBackToTop = false;
   isDarkTheme = false;
+  currentUrl = '';
 
+  private router = inject(Router);
   constructor(private renderer: Renderer2) {}
 
   ngOnInit() {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe((event: any) => {
+      this.currentUrl = event.url;
+    });
+
     // Check system preference
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     

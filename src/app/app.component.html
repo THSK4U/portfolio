@@ -1,9 +1,9 @@
 <div id="home" class="flex border-b border-stone-200 p4 md:py-4 justify-between">
   <a href="/" class="w-100 text-decoration-none d-flex justify-between">
-      <h2 class="text-2xl font-bold text-primary-green">THSK</h2>
+      <h2 class="text-2xl font-bold text-primary-green read-more-left">THSK</h2>
   </a>
   <a href="/Articles" class="text-decoration-none">
-      <h4 class="text-2xl font-bold text-primary-green" >Articles</h4>
+      <h4 class="text-2xl font-bold text-primary-green read-more" >Articles</h4>
   </a>
 </div>
 <router-outlet />
@@ -11,8 +11,12 @@
     <div class="position-fixed bottom-4 start-50 translate-middle-x">
       <div class="d-flex align-items-center gap-1 rounded-pill px-4 py-2 shadow-lg" [ngClass]="{'bg-white': !isDarkTheme, 'bg-dark': isDarkTheme}">
         <!-- Home -->
-        <a href="/" class="btn btn-ghost" [ngClass]="{'text-emerald-800': !isDarkTheme, 'text-emerald-400': isDarkTheme}" aria-label="Home">
+        <a *ngIf="currentUrl !== '/'" href="/" class="btn btn-ghost" [ngClass]="{'text-emerald-800': !isDarkTheme, 'text-emerald-400': isDarkTheme}" aria-label="Home">
           <i class="bi bi-house-fill"></i>
+        </a>
+        <!-- Blog -->
+        <a *ngIf="currentUrl !== '/Articles'" href="/Articles" class="btn btn-ghost" [ngClass]="{'text-emerald-800': !isDarkTheme, 'text-emerald-400': isDarkTheme}" aria-label="Blog">
+          <i class="bi bi-body-text"></i>
         </a>
         <div class="vr"></div>
         <!-- GitHub -->
@@ -23,6 +27,7 @@
         <a href="https://www.linkedin.com/in/sellaktaha/" class="btn btn-ghost" [ngClass]="{'text-emerald-800': !isDarkTheme, 'text-emerald-400': isDarkTheme}" aria-label="LinkedIn" target="_blank" rel="noopener">
           <i class="bi bi-linkedin"></i>
         </a>
+
         <div class="vr"></div>
         <!-- Theme Toggle -->
         <button type="button" class="btn btn-ghost" [ngClass]="{'text-emerald-800': !isDarkTheme, 'text-emerald-400': isDarkTheme}" (click)="toggleTheme()" aria-label="Toggle theme">
@@ -41,4 +46,3 @@
     aria-label="Back to top">
     <i class="bi bi-arrow-up"></i>
   </button>
-  

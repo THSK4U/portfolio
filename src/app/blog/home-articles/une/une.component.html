@@ -14,7 +14,7 @@
 </div>
 
 <!-- Message No content in database -->
-<div *ngIf="featuredArticle === null && !loading" class="alert text-warning text-center font-bold text-lg justify-content my-4">
+<div *ngIf="featuredArticle === null && !loading && !error" class="alert text-warning text-center font-bold text-lg justify-content my-4">
   <div class="cool-message">
     <h2>Oups ! Aucun contenu trouvé</h2>
     <p>Il semble qu'il n'y ait rien ici pour le moment. Restez à l'écoute pour plus de contenu incroyable à venir bientôt !</p>

@@ -64,3 +64,48 @@
     transform: translateY(0);
   }
 }
+.read-more-left {
+  display: inline-flex;
+  justify-content: left;
+  color: #91C96E;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: darken(#91C96E, 10%);
+  }
+
+  &::before {
+    content: '← ';
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  &:hover::before {
+    opacity: 1;
+    transform: translateX(-5px);
+  }
+}
+
+.read-more {
+  display: inline-flex;
+  justify-content: right;
+  color: #91C96E;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: darken(#91C96E, 10%);
+  }
+
+  &::after {
+    content: ' →';
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    transform: translateX(5px);
+  }
+}
