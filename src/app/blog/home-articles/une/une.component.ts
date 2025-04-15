@@ -9,7 +9,7 @@ import { ArticleService } from '../../../services/article.service';
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './une.component.html',
-  styleUrls: ['./une.component.scss', './unelist.scss']
+  styleUrl: './une.component.scss'
 })
 export class UneComponent implements OnInit {
     // Article principal mis en avant
