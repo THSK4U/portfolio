@@ -40,7 +40,7 @@ export class UneComponent implements OnInit {
                     // Le premier article est mis en avant
                     this.featuredArticle = articles[0];
                     // Les autres articles sont dans la liste
-                    this.list = articles.slice(1, 4); // Limite à 3 articles supplémentaires
+                    this.list = articles.slice(1, 3);
 
                 }
                 this.loading = false;
