@@ -8,7 +8,7 @@ import { Article } from '../models/article.model';
   providedIn: 'root'
 })
 export class ArticleService {
-  private apiUrl = 'https://sellak.vercel.app';
+  private apiUrl = 'https://backend.thskdev.site';
 
   constructor(private http: HttpClient) { }
 
